@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do list</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+ <div class="header_container">
+
+    <div id="Heading">TO DO LIST</div>
+    <div class="header_icon_container">
+        
+  <a href="profile.html" class="about">
+    <ion-icon name="alert-circle-outline" class="about_icon"></ion-icon>
+  </a>
+
+ <a href="/html/Log.html" class="about">
+    <ion-icon name="calendar-outline" class="about_icon"></ion-icon>
+  </a>
+</div>
+</div>
+    <div class="container">
+        <div class="input-box">
+        <div class="container-input">
+            <div class="entryarea">
+                <input class="input-field" required id="InputTask" type="text">
+                <div class="lebelline"><ion-icon name="pencil"></ion-icon>Enter your task name</div>
+            </div>
+        </div>
+
+        <div class="container-input">
+            <div class="entryarea">
+                <input class="input-field datetime-field" required id="task-deadline" type="datetime-local">
+                <div class="lebelline"><ion-icon name="calendar-outline"></ion-icon>Select deadline</div>
+                
+            </div>
+        </div>
+    
+    
+        <button id="btn">
+            <span class="button__text">Add</span>
+            <span class="button__icon">
+                <ion-icon name="add-circle-outline"></ion-icon>
+            </span>
+        </button>
+    </div>
+
+        <!-- <a href="Log.html">
+            <button id="btn">
+                <span class="button__text">History</span>
+                <span class="button__icon">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                </span>
+            </button>
+        </a> -->
+
+        <h3 class='days'></h3>
+        <h3 class='hours'></h3>
+        <h3 class='minutes'></h3>
+        <h3 class='seconds'></h3>
+        <div id="Task_list"></div>
+        <p id="mytext"></p>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="/script/script.js"></script>
+    </div>
+</body>
+
+</html>

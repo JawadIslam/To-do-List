@@ -1,0 +1,804 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
+
+/* Task list styles */
+
+.header_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40%;
+    /* padding: 2 4vhs; */
+    margin: 4 6vh;
+    width: 100%;
+    flex-basis: 200px;
+}
+
+.header_icon_container {
+    display: flex;
+    float:left;
+    padding: 0 20px;
+    position: right;
+    justify-content: space-around; }
+
+
+.task_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b8b8b8;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.task_name {
+    font-size: 1.2rem;
+    font-family: "Teachers", sans-serif;
+    font-weight: 300;
+    color: #483f3f;
+    justify-content: left;
+}
+
+/* Countdown time styles */
+.countDown_time {
+    font-size: 6vh;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    color: #696969;
+}
+
+/* Input and button styles */
+input {
+    height: 8vh;
+    width: 30vw;
+    font-size: 3vh;
+}
+
+button {
+    height: 9vh;
+    width: 10vw;
+    font-size: 4vh;
+}
+
+/* Heading styles */
+#Heading {
+    font-size: 3.5rem;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.08rem;
+    color: #555548;
+    margin: 0 4vh;
+    
+}
+
+/* Ion icon styles */
+ion-icon {
+    font-size: 1.8rem;
+    --ionicon-stroke-width: 1.5rem;
+    color: #797979;
+}
+
+
+.about{
+    
+    background: #f9f9f9;
+    border: none;
+    outline: none;
+    padding:15px;
+    display: inline-flex;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    align-items: center;
+    padding: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "Quicksand", sans-serif;
+    overflow: hidden;
+    border-radius: 50px;
+    justify-content: center;
+    float: left;
+    margin: 0 1vw;
+
+}
+
+.about_icon{
+    color: #1f3345;
+    font-size: 1.7rem;
+}
+
+.about:hover {
+    background: #e9e9e9;
+}
+
+/* Button styles */
+#btn {
+    justify-content: center;
+    background: #f9f9f9;
+    border: none;
+    outline: none;
+    width: 13vw;
+    height: 10vh;
+    display: inline-flex;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    align-items: center;
+    padding: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "Quicksand", sans-serif;
+    /* overflow: hidden; */
+    border-radius: 4px;
+}
+
+#btn:hover {
+    background: #e9e9e9;
+}
+
+.button__text,
+.button__icon {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+}
+
+.button__text {
+    color: #1f3345;
+     font-size: 1em;
+}
+
+.button__icon {
+    color: #1f3345;
+     margin-left: 1.8vh ;
+    font-size: 1.7rem;
+}
+
+.button__icon ion-icon {
+    color: #1f3345;
+}
+
+.custom-checkbox {
+    display: none;
+}
+
+/* Input field container styles */
+
+.input-box{
+    display: flex;
+    justify-content:space-between;
+    width: 90%;
+    height: 25%;
+    /* padding:0 4vh; */
+    margin:8vh;
+    
+    }
+
+.container-input {
+    width: 40vw;
+}
+
+.entryarea {
+    position: relative;
+    height: 15vh;
+    line-height: 9vh;
+}
+
+/* Common input field styles */
+.input-field,
+.datetime-field {
+    position: absolute;
+    width: 80%;
+    height: 60%;
+
+    font-family: "Teachers", sans-serif;
+    font-size: 1.2rem;
+    padding: 5 30px;
+    border-radius: 7px;
+    line-height: 4vh;
+    border: 2px solid #143565;
+    background: rgb(255, 255, 255);
+    transition: 0.1s ease;
+    outline: none;
+    z-index: 2;
+    color: rgb(255, 255, 255);
+}
+
+/* Label styles */
+.lebelline {
+    display: flex;
+    font-family: "Quicksand", sans-serif;
+    align-items: center;
+    position: absolute;
+    font-size: 1.2em;
+    color: #143565;
+    padding: 0 1.8vh;
+    margin: 0 2vh;
+    transition: 0.2s ease;
+    pointer-events: none;
+    background: transparent;
+    z-index: 2; /* Adjusted to be above input */
+}
+
+.lebelline ion-icon {
+    font-size: 1em;
+    padding: 2.5vh;
+    margin-right: 1vw;
+}
+
+/* Input field focus and valid states */
+.input-field:focus,
+.input-field:valid
+ {
+    color: #0c2141;
+    border: 3px solid #636364;
+    background: transparent;
+}
+
+
+
+
+.datetime-field:focus,
+.datetime-field:valid {
+    color: #1d3253;
+    border: 3px solid #636364;
+    background: transparent;
+}
+
+.input-field:focus + .lebelline,
+.input-field:valid + .lebelline,
+.datetime-field:focus + .lebelline,
+.datetime-field:valid + .lebelline {
+    color: #0c2141;
+    height: 30px;
+    line-height: 30px;
+    transform: translate(-15px, -16px) scale(0.75);
+    padding: 0 12px;
+    background: rgb(255, 255, 255); /* Background set to match the form */
+    z-index: 2;
+}
+
+/* Remove date picker arrow styles */
+input[type="datetime-local"]::-webkit-inner-spin-button,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    display:none;
+    -webkit-appearance: none;
+    margin: 0;
+   
+}
+
+
+
+input[type="datetime-local"]:focus::-webkit-calendar-picker-indicator{
+    display:block;
+    -webkit-appearance:block;
+    margin: 0;
+    size:20px;
+    opacity: 1;
+
+}
+.custom-date-input {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+input[type="datetime-local"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+} 
+
+
+@media (max-width: 768px) {
+    .header_container {
+        flex-direction: column;
+        height: auto;
+        margin: 2vh;
+    }
+
+    .header_icon_container {
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .task_list {
+      
+      
+    }
+
+    .task_name {
+        font-size: 1.1rem;
+    }
+
+    .countDown_time {
+        font-size: 4vh;
+    }
+
+    input {
+        height: 15vh;
+        width: 80vw;
+        font-size: 2vh;
+    }
+
+    button {
+        height: 7vh;
+        width: 50vw;
+        font-size: 3vh;
+    }
+
+    #Heading {
+        font-size: 2.5rem;
+        
+    }
+
+    .about {
+        padding: 10px;
+        margin: 1vh;
+      
+    }
+
+    #btn {
+        width: 80vw;
+        height: 7vh;
+        padding: 4vh;
+    }
+
+    .button__text {
+        font-size: 1.2em;
+    }
+
+    .input-box {
+        flex-direction: column;
+        width: 100%;
+        margin:  3vh;
+        font-size: 4px;
+        
+    }
+
+    .container-input {
+        width: 90vw;
+        
+    }
+
+    .entryarea {
+        height: 15vh;
+        line-height: 1vh;
+        
+    }
+
+    .input-field,
+    .datetime-field {
+        width: 90%;
+        height: 50%;
+    }
+
+    .lebelline {
+        font-size: 0.9rem;
+    }
+    .button__icon ion-icon {
+        font-size: 1.4rem;
+    }
+    .about ion-icon{
+        font-size: 1.2rem;
+    }
+    ion-icon {
+        font-size: 1.3rem;
+ 
+    }
+  
+}/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
+
+/* Task list styles */
+
+.header_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40%;
+    /* padding: 2 4vhs; */
+    margin: 4 6vh;
+    width: 100%;
+    flex-basis: 200px;
+}
+
+.header_icon_container {
+    display: flex;
+    float:left;
+    padding: 0 20px;
+    position: right;
+    justify-content: space-around; }
+
+
+.task_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.task_name {
+    font-size: 1.2rem;
+    font-family: "Teachers", sans-serif;
+    font-weight: 300;
+    color: #483f3f;
+    justify-content: left;
+}
+
+/* Countdown time styles */
+.countDown_time {
+    font-size: 6vh;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    color: #696969;
+}
+
+/* Input and button styles */
+input {
+    height: 8vh;
+    width: 30vw;
+    font-size: 3vh;
+}
+
+button {
+    height: 9vh;
+    width: 10vw;
+    font-size: 4vh;
+}
+
+/* Heading styles */
+#Heading {
+    font-size: 3.5rem;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.08rem;
+    color: #555548;
+    margin: 0 4vh;
+    
+}
+
+/* Ion icon styles */
+ion-icon {
+    font-size: 1.8rem;
+    --ionicon-stroke-width: 1.5rem;
+    color: #797979;
+}
+
+
+.about{
+    
+    background: #f9f9f9;
+    border: none;
+    outline: none;
+    padding:15px;
+    display: inline-flex;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    align-items: center;
+    padding: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "Quicksand", sans-serif;
+    overflow: hidden;
+    border-radius: 50px;
+    justify-content: center;
+    float: left;
+    margin: 0 1vw;
+
+}
+
+.about_icon{
+    color: #1f3345;
+    font-size: 1.7rem;
+}
+
+.about:hover {
+    background: #e9e9e9;
+}
+
+/* Button styles */
+#btn {
+    justify-content: center;
+    background: #f9f9f9;
+    border: none;
+    outline: none;
+    width: 13vw;
+    height: 10vh;
+    display: inline-flex;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    align-items: center;
+    padding: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "Quicksand", sans-serif;
+    /* overflow: hidden; */
+    border-radius: 4px;
+}
+
+#btn:hover {
+    background: #e9e9e9;
+}
+
+.button__text,
+.button__icon {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+}
+
+.button__text {
+    color: #1f3345;
+     font-size: 1em;
+}
+
+.button__icon {
+    color: #1f3345;
+     margin-left: 1.8vh ;
+    font-size: 1.7rem;
+}
+
+.button__icon ion-icon {
+    color: #1f3345;
+}
+
+.custom-checkbox {
+    display: none;
+}
+
+/* Input field container styles */
+
+.input-box{
+    display: flex;
+    justify-content:space-between;
+    width: 90%;
+    height: 25%;
+    /* padding:0 4vh; */
+    margin:8vh;
+    
+    }
+
+.container-input {
+    width: 40vw;
+}
+
+.entryarea {
+    position: relative;
+    height: 15vh;
+    line-height: 9vh;
+}
+
+/* Common input field styles */
+.input-field,
+.datetime-field {
+    position: absolute;
+    width: 80%;
+    height: 60%;
+
+    font-family: "Teachers", sans-serif;
+    font-size: 1.2rem;
+    padding: 5 30px;
+    border-radius: 7px;
+    line-height: 4vh;
+    border: 2px solid #143565;
+    background: rgb(255, 255, 255);
+    transition: 0.1s ease;
+    outline: none;
+    z-index: 2;
+    color: rgb(255, 255, 255);
+}
+
+/* Label styles */
+.lebelline {
+    display: flex;
+    font-family: "Quicksand", sans-serif;
+    align-items: center;
+    position: absolute;
+    font-size: 1.2em;
+    color: #143565;
+    padding: 0 1.8vh;
+    margin: 0 2vh;
+    transition: 0.2s ease;
+    pointer-events: none;
+    background: transparent;
+    z-index: 2; /* Adjusted to be above input */
+}
+
+.lebelline ion-icon {
+    font-size: 1em;
+    padding: 2.5vh;
+    margin-right: 1vw;
+}
+
+/* Input field focus and valid states */
+.input-field:focus,
+.input-field:valid
+ {
+    color: #0c2141;
+    border: 3px solid #636364;
+    background: transparent;
+}
+
+
+
+
+.datetime-field:focus,
+.datetime-field:valid {
+    color: #1d3253;
+    border: 3px solid #636364;
+    background: transparent;
+}
+
+.input-field:focus + .lebelline,
+.input-field:valid + .lebelline,
+.datetime-field:focus + .lebelline,
+.datetime-field:valid + .lebelline {
+    color: #0c2141;
+    height: 30px;
+    line-height: 30px;
+    transform: translate(-15px, -16px) scale(0.75);
+    padding: 0 12px;
+    background: rgb(255, 255, 255); /* Background set to match the form */
+    z-index: 2;
+}
+
+/* Remove date picker arrow styles */
+input[type="datetime-local"]::-webkit-inner-spin-button,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    display:none;
+    -webkit-appearance: none;
+    margin: 0;
+   
+}
+
+
+
+input[type="datetime-local"]:focus::-webkit-calendar-picker-indicator{
+    display:block;
+    -webkit-appearance:block;
+    margin: 0;
+    size:20px;
+    opacity: 1;
+
+}
+.custom-date-input {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+input[type="datetime-local"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+} 
+
+
+@media (max-width: 768px) {
+    .header_container {
+        flex-direction: column;
+      justify-content: sp;
+        margin: 1vh;
+    }
+
+    .header_icon_container {
+        justify-content: center;
+        padding: 7px 0;
+        margin-top: -1vh;
+    }
+
+    .task_list {
+      
+      width: 100%;
+      height: 10vh;
+      padding:0 1vw;
+    }
+
+    .task_name {
+        font-size: 1.1rem;
+    }
+
+    .countDown_time {
+        font-size: 3vh;
+    }
+
+    input {
+        height: 15vh;
+        width: 80vw;
+        font-size: 2vh;
+    }
+
+    button {
+        height: 6vh;
+        width: 55vw;
+        font-size: 2.8vh;
+    }
+
+    #Heading {
+        font-size: 3.2rem;
+        
+    }
+
+    .about {
+       
+    margin-top: -0.8vh;
+      
+    }
+
+    #btn {
+        width: 83vw;
+        height: 4vh;
+        padding: 3vh;
+        margin-top: -2vh;
+       
+    }
+
+    .button__text {
+        font-size: 0.9em;
+        color: #949494;
+    }
+
+    .input-box {
+        flex-direction: column;
+        width: 100%;
+        margin:  3vh;
+        font-size: 4px;
+        
+    }
+
+    .container-input {
+        width: 90vw;
+        
+    }
+
+    .entryarea {
+        height: 12vh;
+        line-height: 1vh;
+        margin-top: -3vh;
+      
+        
+    }
+
+    .input-field,
+    .datetime-field {
+        width: 90%;
+        height: 50%;
+
+    }
+
+    .lebelline {
+        font-size: 1rem;
+    }
+    .button__icon ion-icon {
+        font-size: 1.7rem;
+        color: #949494;
+    }
+    .about ion-icon{
+        font-size: 1.6rem;
+     
+        
+    }
+    ion-icon {
+        font-size: 2rem;
+    }
+  
+}

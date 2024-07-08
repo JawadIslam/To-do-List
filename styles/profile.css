@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
+body{
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-1{
+    width:7.3rem;
+    height: 7rem;
+}
+
+.img-2{
+    width:8.8rem;
+    height: 7.5rem;
+}
+
+.Heading{
+font-size: 2rem;
+font-family: "Bebas Neue", sans-serif;
+}
+
+
+.contact{
+    display: flex;
+     flex-direction:column;
+    justify-content:center;
+    align-items:center; 
+    margin:auto;
+    width: auto;
+    
+
+}
+
+.social{ 
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+
+}
+.social a ,ion-icon{
+    text-decoration: none;
+    color: inherit;
+   
+     font-family: "Quicksand", sans-serif;
+   
+    color:  #2a4154;
+}
+.social ion-icon{
+    margin: 0.3rem;
+    font-size: 1.2rem;
+    color:  #1f3345;
+}
+
+.massage-container{
+    display: flex ;
+    box-sizing: border-box;
+    flex-direction:row;
+    margin: 10px;
+    width: 80%;
+    height: 70%;
+    border: 1px solid #1f3345 ;
+    border-radius: 5px;
+}
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    margin: 1vh;
+    width: 100%;
+}
+
+.header_icon_container {#Heading {
+    font-size: 3.5rem;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.08rem;
+    color: #555548;
+    margin: 0 4vh;
+    
+}
+    justify-content: center;
+    padding: 7px 0;
+    margin-top: -1vh;
+}
+#Heading {
+    font-size: 3.5rem;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.08rem;
+    color: #555548;
+    margin: 0 4vh;
+    
+}
+
+
+
+.about{
+    
+    background: #f9f9f9;
+    border: none;
+    outline: none;
+    padding:15px;
+    display: inline-flex;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    align-items: center;
+    padding: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "Quicksand", sans-serif;
+    overflow: hidden;
+    border-radius: 50px;
+    justify-content: center;
+    float: left;
+    margin: 0 1vw;
+
+}
+
+.about_icon{
+    color: #1f3345;
+    font-size: 1.7rem;
+}
+
+.about:hover {
+    background: #e9e9e9;
+}
+.image_heading{
+    display: flex;
+    flex-direction:row;
+    
+    align-items: baseline;
+}
+@media (max-width: 768px) {
+
+    .massage-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .image_heading{
+        flex-direction:column;
+    }
+}
